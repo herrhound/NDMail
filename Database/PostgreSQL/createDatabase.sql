@@ -4,3 +4,4 @@ create table dict.Language (
 	Description	varchar(1024) 	NULL,
 	Code		varchar(8)	NULL
 )
+
