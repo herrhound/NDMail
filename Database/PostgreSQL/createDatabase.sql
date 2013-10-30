@@ -1,7 +1,7 @@
-create table dict.Language (
-	LanguageId	integer	CONSTRAINT PK_dict_LanguageId PRIMARY KEY,
-	Name		varchar(256) 	NOT NULL,
-	Description	varchar(1024) 	NULL,
-	Code		varchar(8)	NULL
-)
-
+CREATE TABLE language
+(
+  languageid INT NOT NULL,
+  name VARCHAR(256) NOT NULL,
+  description VARCHAR(1024),
+  code VARCHAR(8)
+);
