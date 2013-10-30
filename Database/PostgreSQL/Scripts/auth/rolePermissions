@@ -1,0 +1,8 @@
+CREATE TABLE auth."RolePermissions"(
+	roleId uuid not null,
+	permissionId uuid not null,
+	permissionState int not null,
+	systemStatusId int,
+	CONSTRAINT "RolePermissions_pkey" PRIMARY KEY (roleId, permissionId)
+
+)
