@@ -12,3 +12,20 @@ CREATE TABLE main.templatedetails
     systemstatusid      INT                 NOT NULL,
     transactionid       INT                 NOT NULL
 );
+
+
+ALTER TABLE main.templatedetails
+ADD CONSTRAINT Fk_main_Template_ApplicationId FOREIGN KEY (applicationid)
+REFERENCES auth.application (applicationId) MATCH SIMPLE;
+
+ALTER TABLE main.templatedetails
+ADD CONSTRAINT Fk_main_Template_SystemStatusId FOREIGN KEY (systemstatusid)
+REFERENCES dict.systemstatus (systemstatusid) MATCH SIMPLE;
+
+ALTER TABLE main.templatedetails
+ADD CONSTRAINT Fk_main_Template_TransactionId FOREIGN KEY (transactionid)
+REFERENCES main.transaction (transactionid) MATCH SIMPLE;
+
+ALTER TABLE main.templatedetails
+ADD CONSTRAINT Fk_main_TemplateDetails_LanguageId FOREIGN KEY (languageid)
+REFERENCES dict.language (languageid) MATCH SIMPLE;
