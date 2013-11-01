@@ -1,7 +1,11 @@
-CREATE TABLE "Permissions"
+CREATE TABLE auth.permissions
 (
-  permissionid          UUID PRIMARY KEY NOT NULL,
+  permissionId          UUID PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
   permissioncode        VARCHAR(50)      NOT NULL,
   permissiondescription VARCHAR(150),
-  systemstatusid        INT
+  systemstatusId        INT
 );
+
+ALTER TABLE auth.permissions
+ADD CONSTRAINT auth_permissions_systemStatusId FOREIGN KEY (systemstatusId)
+REFERENCES dict.systemstatus (systemstatusid);
