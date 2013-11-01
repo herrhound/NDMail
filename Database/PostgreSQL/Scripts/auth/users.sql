@@ -3,7 +3,7 @@ CREATE TABLE auth."Users" (
   userName       VARCHAR(50)  NOT NULL,
   userPassword   VARCHAR(150) NOT NULL,
   email          VARCHAR(150) NULL,
-  secretQeustion VARCHAR(150) NULL,
+  secretQuestion VARCHAR(150) NULL,
   secretAnswer   VARCHAR(150) NULL,
   systemStatusId INT
 )

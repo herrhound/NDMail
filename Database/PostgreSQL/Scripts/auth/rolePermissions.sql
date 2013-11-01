@@ -1,4 +1,4 @@
-CREATE TABLE "RolePermissions"
+CREATE TABLE auth.RolePermissions
 (
   roleid          UUID NOT NULL,
   permissionid    UUID NOT NULL,
