@@ -1,6 +1,6 @@
-CREATE TABLE auth."UserInRoles"(
-	userId uuid not null,
-	roleId uuid not null,
-	systemStatusId int,
-	CONSTRAINT "UserInRoles_pkey" PRIMARY KEY (userId, roleid)
+CREATE TABLE auth."UserInRoles" (
+  userId         UUID NOT NULL,
+  roleId         UUID NOT NULL,
+  systemStatusId INT,
+  CONSTRAINT "UserInRoles_pkey" PRIMARY KEY (userId, roleid)
 )
