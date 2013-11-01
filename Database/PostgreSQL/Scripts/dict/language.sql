@@ -1,6 +1,6 @@
-CREATE TABLE language
+CREATE TABLE dict.language
 (
-  languageid INT NOT NULL,
+  languageId INT NOT NULL,
   name VARCHAR(256) NOT NULL,
   description VARCHAR(1024),
   code VARCHAR(8)
