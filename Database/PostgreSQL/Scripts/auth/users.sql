@@ -1,4 +1,4 @@
-CREATE TABLE auth."Users" (
+CREATE TABLE auth.Users(
   userId         UUID         NOT NULL PRIMARY KEY DEFAULT uuid_generate_v4(),
   userName       VARCHAR(50)  NOT NULL,
   userPassword   VARCHAR(150) NOT NULL,
