@@ -5,11 +5,95 @@
 <html>
     <head>
         <title>@title</title>
-        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("../../public/stylesheets/custom/site.css")">
+
+        <!-- JQuery base theme -->
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/themes/base/jquery.ui.core.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/themes/base/jquery.ui.resizable.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/themes/base/jquery.ui.selectable.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/themes/base/jquery.ui.accordion.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/themes/base/jquery.ui.autocomplete.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/themes/base/jquery.ui.button.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/themes/base/jquery.ui.dialog.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/themes/base/jquery.ui.slider.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/themes/base/jquery.ui.tabs.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/themes/base/jquery.ui.datepicker.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/themes/base/jquery.ui.progressbar.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/themes/base/jquery.ui.theme.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+
+        <!-- Bootstrap themes -->
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap/css/bootstrap.min.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap/css/bootstrap-responsive.min.css")">
+
+            <!-- JQuery-->
+        <script src="@routes.Assets.at("javascripts/JQuery/jquery-1.9.1.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/JQuery/jquery-ui-1.10.2.custom.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/JQuery/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/JQuery/jquery.validate.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/JQuery/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+        <!-- JQuery plugins-->
+        <script src="@routes.Assets.at("javascripts/JQuery/Plugins/jquery.busy.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/JQuery/Plugins/jquery.checkboxes.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/JQuery/Plugins/jquery.cookie.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/JQuery/Plugins/jquery.corner.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/JQuery/Plugins/jquery.selectboxes.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/JQuery/Plugins/jquery.watermark.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/JQuery/Plugins/jquery_tablescroll.js")" type="text/javascript"></script>
+
+        <!-- Bootstrap -->
+        <script src="@routes.Assets.at("javascripts/bootstrap/bootstrap.min.js")" type="text/javascript"></script>
     </head>
     <body>
-        @content
+        <div id="wrap">
+            <div class="container">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+                            <div class="row-fluid">
+                                <div class="span2">
+                                </div>
+                                <div class="span8">
+                                    <a class="brand" href="#">Nous Dynamics Mail</a>
+                                    @views.html.Templates.topmenu(false)
+                                </div>
+                                <div class="span2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid" style="margin-top: 10px;" >
+                    <div class="row-fluid">
+                        <div class="span2">
+                        </div>
+                        <div class="span8 central-part">
+                        @content
+                        </div>
+                        <div class="span2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="push">
+                <div class="container">
+                    <div class="row-fluid">
+                        <div class="span2"></div>
+                        <div class="span8"></div>
+                        <div class="span2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span2"></div>
+                    <div class="span8">Copyright ®2013 by Nous Dynamics. All rights reserved.</div>
+                    <div class="span2"></div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
