@@ -1,4 +1,4 @@
-name := "NDMail"
+name := "ndmail"
 
 version := "1.0-SNAPSHOT"
 
