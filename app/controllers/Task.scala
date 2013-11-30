@@ -15,7 +15,8 @@ object Task extends BaseController {
 
   def index = Action {
     //Ok(views.html.Task.index("Your new application is ready."))
-    Ok(views.html.Task.index(basedal.dal.getLanguafeById(1)))
+    //Ok(views.html.Task.index(basedal.dal.getLanguafeById(1)))
+    Ok(views.html.Task.index(Utils.TestUtil.TestUtilMsg))
   }
 
 }

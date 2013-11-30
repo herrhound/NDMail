@@ -12,14 +12,16 @@ object ApplicationBuild extends Build {
     anorm
   )
 
-  val domainmodels = play.Project(appName + "-domainmodels", appVersion, path = file("modules/NDMail.Domain.Models"))
+  val ndmailhelpers = play.Project(appName + "-ndmailhelpers", appVersion, path = file("modules/NDMail.Helpers"))
 
-  val ndmaildal = play.Project(appName + "-ndmaildal", appVersion, path = file("modules/NDMail.Dal")).dependsOn(domainmodels)
+  val domainmodels = play.Project(appName + "-domainmodels", appVersion, path = file("modules/NDMail.Domain.Models")).dependsOn(ndmailhelpers)
 
-  val sender = play.Project(appName + "-ndmailsender", appVersion, path = file("modules/NDMail.Sender")).dependsOn(ndmaildal, domainmodels)
+  val ndmaildal = play.Project(appName + "-ndmaildal", appVersion, path = file("modules/NDMail.Dal")).dependsOn(domainmodels, ndmailhelpers)
+
+  val sender = play.Project(appName + "-ndmailsender", appVersion, path = file("modules/NDMail.Sender")).dependsOn(ndmaildal, domainmodels, ndmailhelpers)
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
     // Add your own project settings here
-  ).dependsOn(ndmaildal).aggregate(ndmaildal)
+  ).dependsOn(ndmaildal, ndmailhelpers).aggregate(ndmaildal, ndmailhelpers)
 
 }
