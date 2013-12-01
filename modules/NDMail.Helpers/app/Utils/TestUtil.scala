@@ -9,7 +9,7 @@ package Utils
  */
 object TestUtil {
   def TestUtilMsg: String = {
-    val msg: String = "Good Night Alex!"
+    val msg: String = "Hello Alex!"
     msg
   }
 }

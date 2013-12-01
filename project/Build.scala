@@ -20,8 +20,10 @@ object ApplicationBuild extends Build {
 
   val sender = play.Project(appName + "-ndmailsender", appVersion, path = file("modules/NDMail.Sender")).dependsOn(ndmaildal, domainmodels, ndmailhelpers)
 
+  val webmodels = play.Project(appName + "-webmodels", appVersion, path = file("modules/NDMail.Web.Models")).dependsOn(ndmailhelpers)
+
   val main = play.Project(appName, appVersion, appDependencies).settings(
     // Add your own project settings here
-  ).dependsOn(ndmaildal, ndmailhelpers).aggregate(ndmaildal, ndmailhelpers)
+  ).dependsOn(ndmaildal, webmodels, ndmailhelpers).aggregate(ndmaildal, webmodels, ndmailhelpers)
 
 }

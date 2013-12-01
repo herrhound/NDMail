@@ -12,5 +12,7 @@ GET        /assets/*file                controllers.Assets.at(path="/public", fi
 
 ->         /NDMail.Dal                  ndmaildal.Routes
 
+->         /NDMail.Web.Models           webmodels.Routes
+
 
 #->         /NDMail.Domain.Models        domainmodels.Routes
