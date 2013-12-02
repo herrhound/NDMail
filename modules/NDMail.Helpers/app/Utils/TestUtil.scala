@@ -7,9 +7,7 @@ package Utils
  * Time: 1:20 AM
  * To change this template use File | Settings | File Templates.
  */
-object TestUtil {
-  def TestUtilMsg: String = {
-    val msg: String = "Hello Alex!"
-    msg
-  }
+
+object UUID {
+  def generate() = java.util.UUID.randomUUID()
 }
