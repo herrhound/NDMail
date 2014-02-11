@@ -9,13 +9,10 @@ import play.api.db.DB
 import play.GlobalSettings
 import scaldi.play.ScaldiSupport
 
-//object Global extends GlobalSettings with ScaldiSupport
 /*
-object Global extends GlobalSettings
+object Global extends GlobalSettings with ScaldiSupport
 {
 
-
-/*
   override def onStart(app: Application) {
     SessionFactory.concreteFactory = app.configuration.getString("db.default.driver") match {
       case Some("org.h2.Driver") => Some(() => getSession(new H2Adapter, app))
@@ -23,7 +20,6 @@ object Global extends GlobalSettings
       case _ => sys.error("Database driver must be either org.h2.Driver or org.postgresql.Driver")
     }
   }
-*/
 
   def getSession(adapter:DatabaseAdapter, app: Application) = Session.create(DB.getConnection()(app), adapter)
   //def applicationModule = new AppModule
